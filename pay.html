@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Payment</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap/css/bootstrap.css')}}">
+    <style type="text/css">
+  a{
+      color: white;
+  }
+    </style>
+</head>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-8">
+             <nav class="navbar fixed-top navbar-expand-lg  fixed-top" style='background-color:green'>
+                 <div class="container">
+                   <div class="collapse navbar-collapse" id="navbarResponsive">
+                     <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                             <a class="nav-link" href="/">HOME</a>
+           </li>
+                       <li class="nav-item">
+                         <a class="nav-link" href="/payment">CONFIRM PAYMENT</a>
+           </li>
+                       <li class="nav-item">
+                         <a class="nav-link" href="/logout">LOGOUT</a>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+               </nav>
+               </div>
+               </div><br><br><br><br>
+    <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3 mb-4">
+              </div>   
+                
+                <div class="col-md-6">
+                
+               </p>
+               </div>
+                     
+                <b>Complete the form below to make payment for the service you ordered above</b><br>
+           <p>You will then be redirected to a page where you will be asked to supply your card details<br> An invoice will be generated for you thereafter.</p>
+     
+          
+
+
+      
+        <form action="" method="post">
+          <input type="hidden" name="csrf_token"  value="{{csrf_token()}}">
+          Name:   <input type="text" name="cname" id="cname">
+          Email:   <input type="email" name="mail" id="mail">
+          Amount:   <input type="text" name="amt" id="amt">
+
+          <button>Submit</button>
+              </form>
+            
+
+              </div>
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+    </div><br><br>
+<div><p style="text-align: center;">Copyright@2020</p></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+Donate Cash Gift
+  <!-- Page Content -->
+  <div class="container-fluid">
+    <!-- Content Row -->
+    <div class="row">
+      <!-- Sidebar Column -->
+      <div class="col-lg-3 mb-4">
+      </div>
+      <!-- Content Column -->
+      <div class="col-lg-9 mb-4">
+        {% with m=get_flashed_messages() %}
+        {% if m %}
+        <div class="alert alert-warning">
+        {% for msg in m %}
+       <p> {{ msg }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+        {% endwith %}
+        <p>You can donate cash gift towards the preparation of the birthday here:<br>
+        <b>Complete the form below to supply an amount you wish to give</b><br>
+    You will then be redirected to a page where you will be asked to supply your card details<br> An invoice will be generated for you thereafter.
+<br> Thank you for your generousity</p>
+
+      </div>
+    </div>
+    </div>

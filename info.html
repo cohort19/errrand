@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Payment</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap/css/bootstrap.css')}}">
+    <style type="text/css">
+  a{
+      color: white;
+  }
+    </style>
+</head>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-8">
+             <nav class="navbar fixed-top navbar-expand-lg  fixed-top" style='background-color:green'>
+                 <div class="container">
+                   <div class="collapse navbar-collapse" id="navbarResponsive">
+                     <ul class="navbar-nav ml-auto">
+                         <li class="nav-item">
+                             <a class="nav-link" href="/">HOME</a>
+           </li>
+                       <li class="nav-item">
+                         <a class="nav-link" href="/payment">CONFIRM PAYMENT</a>
+           </li>
+                       <li class="nav-item">
+                         <a class="nav-link" href="/logout">LOGOUT</a>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+               </nav>
+               </div>
+               </div><br><br><br><br>
+<form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+<input type="hidden" name="public_key" value="FLWPUBK_TEST-SANDBOXDEMOKEY-X" />
+<input type="hidden" name="tx_ref" value="bitethtx-019203" />
+<input type="hidden" name="amount" value="{{amnt}}" />
+<input type="hidden" name="currency" value="NGN" />
+<input type="hidden" name="redirect_url" value="http://127.0.0.1:8096/success" />
+<input type="hidden" name="meta[token]" value="54" />
+<input type="hidden" name="customer[name]" value="{{nam}}" />
+<input type="hidden" name="customer[email]" value="{{mal}}" />
+<button type="submit">Pay Now</button>
+</form>
+
+</div><br><br>
+<div><p style="text-align: center;">Copyright@2020</p></div>
+</body>
+</html>
